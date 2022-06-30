@@ -1,2 +1,6 @@
 # React_TODO_list
-Created with CodeSandbox
+
+Built with React
+Mark Ringrose 2022
+
+CSS by Angela Yu

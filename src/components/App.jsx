@@ -5,9 +5,9 @@ function App() {
   let [list, addItem] = useState([]);
   const inputElement = useRef();
 
+  //add item to the list, reset input and focus on input
   function updateListItem() {
     let item = inputElement.current.value;
-    console.log(inputElement.current.value);
     addItem((prevList) => {
       return [...prevList, item];
     });
@@ -15,6 +15,7 @@ function App() {
     inputElement.current.focus();
   }
 
+  //strike through when clicked
   function listItemDone(event) {
     if (event.target.style.textDecoration) {
       event.target.style.removeProperty("text-decoration");
@@ -23,7 +24,7 @@ function App() {
     }
   }
 
-  let newList = list.map((e) => <Item item={e} onClick={listItemDone} />);
+  let newList = list.map((e) => <Item item={e} click={listItemDone} />);
 
   return (
     <div className="container">
